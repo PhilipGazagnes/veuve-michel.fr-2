@@ -1,0 +1,30 @@
+# Domaine Veuve Michel
+
+> Domaine viticole familial à Octon, au bord du lac du Salagou (Hérault, France).
+> Vins de caractère, gîtes de charme, arboriculture durable et événements au domaine.
+> Transmis de père en fils, le domaine cultive des cépages méridionaux sur des sols
+> rougeâtres façonnés par le lac du Salagou.
+
+## Pages
+
+- [Accueil](https://domaine-veuve-michel.fr/): présentation du domaine, de sa transmission
+  familiale et de ses quatre activités (vins, arboriculture, gîtes, événements).
+- [Nos vins](https://domaine-veuve-michel.fr/vins): la gamme de vins du domaine et sa cuvée
+  phare.
+- [La cuvée star](https://domaine-veuve-michel.fr/vins/cuvee-prestige): fiche détaillée de
+  la cuvée d'exception du domaine (cépage, millésime, dégustation, histoire).
+- [Arboriculture](https://domaine-veuve-michel.fr/arboriculture): démarche du domaine pour
+  faire évoluer ses parcelles face au changement climatique (jeunes vergers).
+- [Gîtes](https://domaine-veuve-michel.fr/gites): deux gîtes indépendants dans une maison
+  de village rénovée, au cœur du domaine.
+- [Événements](https://domaine-veuve-michel.fr/evenements): journées grillades et
+  dégustation au bord du lac du Salagou, pour anniversaires, groupes d'amis et séminaires.
+- [Contact](https://domaine-veuve-michel.fr/contact): coordonnées, localisation et accès
+  au domaine.
+
+## Faits clés
+
+- Localisation : Mas de l'Église, 34800 Octon, France (Hérault).
+- Accès : sur rendez-vous, nous contacter par téléphone ou email avant la visite.
+- La commande de vin et la réservation des gîtes se font en direct avec la famille
+  (téléphone ou email), pas de vente en ligne.

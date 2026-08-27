@@ -1,0 +1,29 @@
+{
+  "name": "domaine-veuve-michel",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/robots": "^6.1.2",
+    "@nuxtjs/sitemap": "^8.2.2",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@storyblok/nuxt": "^11.1.1",
+    "nuxt": "^4.4.8",
+    "nuxt-schema-org": "^6.2.3",
+    "unhead": "^3.1.8",
+    "vue": "^3.5.39",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vue-tsc": "^3.3.7"
+  }
+}
