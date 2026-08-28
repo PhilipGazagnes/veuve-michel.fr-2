@@ -38,7 +38,7 @@ useSeoMeta({
           </p>
           <h2 class="mt-2 font-serif text-[28px] text-ink md:text-[42px]">{{ homeUnivers.heading }}</h2>
         </div>
-        <div class="mt-9 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-4 md:gap-6">
+        <div class="mt-9 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
           <CardsActivityCard v-for="item in activityCards" :key="item.key" :item="item" />
         </div>
       </div>

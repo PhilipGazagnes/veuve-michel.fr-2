@@ -44,6 +44,8 @@ withDefaults(
         :alt="image.alt"
         class="h-full w-full object-cover"
         sizes="100vw"
+        width="1920"
+        :height="height"
         preload
       />
       <div

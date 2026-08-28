@@ -76,4 +76,5 @@ export interface ActivityCardContent {
   title: string
   text: string
   to: string
+  image?: CmsImage
 }

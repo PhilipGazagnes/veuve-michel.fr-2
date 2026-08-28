@@ -116,6 +116,7 @@ const nestableComponents = [
       title: { type: 'text', display_name: 'Titre' },
       text: { type: 'textarea', display_name: 'Texte' },
       to: { type: 'text', display_name: 'Lien' },
+      image: { type: 'asset', display_name: 'Image', filetypes: ['images'] },
     },
   },
 ]

@@ -13,7 +13,7 @@ const props = withDefaults(
   {
     gradientFrom: '#efe7db',
     gradientTo: '#dccbb8',
-    sizes: 'sm:100vw md:600px',
+    sizes: '100vw md:600px',
   },
 )
 

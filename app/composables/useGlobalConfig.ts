@@ -6,7 +6,7 @@ interface RawConfig {
   address_line: string
   legal_page_link: string
   show_ornaments: boolean
-  activity_cards: { key: string; title: string; text: string; to: string }[]
+  activity_cards: { key: string; title: string; text: string; to: string; image?: { filename: string; alt: string } }[]
 }
 
 // Cached under one key so Home/Contact/layout all share a single fetch.
@@ -38,6 +38,7 @@ export async function useActivityCards() {
       title: c.title,
       text: c.text,
       to: c.to,
+      image: c.image?.filename ? c.image : undefined,
     })),
   )
   return { data, ...rest }

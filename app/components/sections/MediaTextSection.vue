@@ -40,6 +40,7 @@ withDefaults(
           :gradient-from="gradientFrom"
           :gradient-to="gradientTo"
           :caption="caption"
+          sizes="700px"
         />
       </div>
 
