@@ -43,11 +43,10 @@ withDefaults(
         :src="image.filename"
         :alt="image.alt"
         class="h-full w-full object-cover"
-        sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
+        sizes="1384px sm:1920px"
         densities="1x"
         width="1920"
         :height="height"
-        preload
       />
       <div
         v-else
