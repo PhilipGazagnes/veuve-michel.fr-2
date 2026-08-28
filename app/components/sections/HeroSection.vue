@@ -43,7 +43,7 @@ withDefaults(
         :src="image.filename"
         :alt="image.alt"
         class="h-full w-full object-cover"
-        sizes="100vw"
+        sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
         width="1920"
         :height="height"
         preload
