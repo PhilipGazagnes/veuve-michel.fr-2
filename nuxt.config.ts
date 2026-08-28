@@ -42,7 +42,6 @@ export default defineNuxtConfig({
 
   image: {
     quality: 70,
-    densities: [1],
   },
 
   nitro: {

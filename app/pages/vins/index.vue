@@ -42,7 +42,7 @@ const { data: gammeCuvees } = await useGammeCuvees()
           rel="noopener"
           class="group relative block aspect-video w-full overflow-hidden rounded md:w-[420px] md:shrink-0"
         >
-          <NuxtImg :src="vinsVideo.thumbnail.filename" :alt="vinsVideo.thumbnail.alt" class="h-full w-full object-cover" />
+          <NuxtImg :src="vinsVideo.thumbnail.filename" :alt="vinsVideo.thumbnail.alt" densities="1x" class="h-full w-full object-cover" />
           <span class="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20">
             <span class="flex h-12 w-[68px] items-center justify-center rounded-lg bg-maroon/90">
               <svg width="16" height="18" viewBox="0 0 16 18" fill="white"><path d="M0 0 16 9 0 18Z" /></svg>

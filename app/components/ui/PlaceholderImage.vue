@@ -27,6 +27,7 @@ const hasRealImage = computed(() => !!props.image?.filename)
       :src="image!.filename"
       :alt="image!.alt"
       :sizes="sizes"
+      densities="1x"
       class="h-full w-full object-cover"
       :class="imgClass"
     />

@@ -81,6 +81,7 @@ const currentImage = computed<CmsImage | undefined>(() => props.images[index.val
             v-if="currentImage"
             :src="currentImage.filename"
             :alt="currentImage.alt"
+            densities="1x"
             class="max-h-full max-w-full object-contain"
           />
 

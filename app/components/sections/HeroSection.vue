@@ -44,6 +44,7 @@ withDefaults(
         :alt="image.alt"
         class="h-full w-full object-cover"
         sizes="sm:100vw md:100vw lg:100vw xl:100vw 2xl:100vw"
+        densities="1x"
         width="1920"
         :height="height"
         preload
