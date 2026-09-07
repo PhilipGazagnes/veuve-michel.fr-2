@@ -5,6 +5,7 @@ const {
   starCard: vinsStarCard,
   gamme: vinsGamme,
   orderBand: vinsOrderBand,
+  chai: vinsChai,
   seo: vinsSeo,
 } = await useVinsContent()
 
@@ -59,8 +60,18 @@ const { data: gammeCuvees } = await useGammeCuvees()
       </div>
     </section>
 
+    <!-- Gamme grid -->
+    <section class="bg-white px-6 pb-16 pt-10 md:px-14 md:pb-[92px] md:pt-20">
+      <div class="mx-auto max-w-content">
+        <p class="font-sans text-[11px] font-semibold uppercase tracking-label text-maroon">{{ vinsGamme.eyebrow }}</p>
+        <div class="mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+          <CardsWineCard v-for="c in gammeCuvees" :key="c.slug" :cuvee="c" />
+        </div>
+      </div>
+    </section>
+
     <!-- Star card -->
-    <section class="bg-white px-6 pb-10 pt-10 md:px-14 md:pb-10 md:pt-20">
+    <section class="bg-white px-6 pb-10 pt-2 md:px-14 md:pb-10 md:pt-6">
       <div class="mx-auto flex max-w-content flex-col overflow-hidden rounded-card border border-hairline-strong shadow-card md:flex-row">
         <div class="w-full md:w-[300px] md:shrink-0">
           <div class="relative aspect-[4/3] md:aspect-auto md:h-full" style="background: linear-gradient(135deg, #efe7db, #dccbb8)">
@@ -79,15 +90,7 @@ const { data: gammeCuvees } = await useGammeCuvees()
       </div>
     </section>
 
-    <!-- Gamme grid -->
-    <section class="bg-white px-6 pb-16 pt-2 md:px-14 md:pb-[92px] md:pt-6">
-      <div class="mx-auto max-w-content">
-        <p class="font-sans text-[11px] font-semibold uppercase tracking-label text-maroon">{{ vinsGamme.eyebrow }}</p>
-        <div class="mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-          <CardsWineCard v-for="c in gammeCuvees" :key="c.slug" :cuvee="c" />
-        </div>
-      </div>
-    </section>
+    <SectionsMediaTextSection v-bind="vinsChai" gradient-from="#e0c9a6" gradient-to="#8a6239" />
 
     <SectionsCtaBand :eyebrow="vinsOrderBand.eyebrow" :heading="vinsOrderBand.heading" :note="vinsOrderBand.body">
       <UiButtonCta :to="vinsOrderBand.to" :label="vinsOrderBand.ctaLabel" arrow variant="solid" />

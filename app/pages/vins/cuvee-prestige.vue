@@ -31,7 +31,7 @@ useSchemaOrg([
       </NuxtLink>
     </div>
 
-    <section class="px-6 pb-6 pt-4 md:px-14 md:pb-6 md:pt-8">
+    <section class="px-6 pb-6 pt-4 md:px-14 md:pb-20 md:pt-8">
       <div class="mx-auto flex max-w-content flex-col gap-8 md:flex-row md:items-start md:gap-[52px]">
         <div class="w-full md:sticky md:top-6 md:w-[340px] md:shrink-0">
           <div class="aspect-[3/4] overflow-hidden rounded-card">
@@ -49,16 +49,6 @@ useSchemaOrg([
             {{ cuvee.description }}
           </p>
           <SectionsSpecGrid :items="cuvee.specGrid!" />
-          <UiButtonCta
-            to="/contact"
-            label="Commander — nous contacter"
-            arrow
-            variant="solid"
-            class="mt-1 justify-center md:justify-start"
-          />
-          <p class="font-sans text-[13px] italic text-muted">
-            Vitrine du domaine — la commande se fait en direct avec la famille.
-          </p>
         </div>
       </div>
     </section>

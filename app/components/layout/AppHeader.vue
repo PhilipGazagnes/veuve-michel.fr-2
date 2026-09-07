@@ -27,16 +27,16 @@ const isTransparent = computed(() => props.variant === 'transparent')
   >
     <div class="flex w-full px-6 py-5 md:px-14 md:py-6">
       <div class="mx-auto flex w-full max-w-content items-center justify-between">
-        <NuxtLink to="/" class="flex items-center gap-3" :class="isTransparent ? 'text-white' : 'text-maroon'">
-          <UiLogoMark :size="60" />
+        <NuxtLink to="/" class="relative -left-5 flex items-center" :class="isTransparent ? 'text-white' : 'text-maroon'">
+          <UiLogoMark :size="100" />
           <span class="flex flex-col leading-none">
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.5em]"
+              class="font-sans text-[11px] font-semibold uppercase tracking-[0.5em]"
               :class="isTransparent ? 'text-white/50' : 'text-muted'"
             >Domaine</span>
-            <div class="font-script leading-[0.9] text-3xl relative -left-[2px] py-1.5">Veuve Michel</div>
+            <div class="font-script leading-[0.9] text-[40px] relative -left-[2px] py-1.5">Veuve Michel</div>
             <span
-              class="font-sans text-[9px] font-semibold uppercase tracking-[0.5em]"
+              class="font-sans text-[11px] font-semibold uppercase tracking-[0.5em]"
               :class="isTransparent ? 'text-white/50' : 'text-muted/80'"
             >Octon · Hérault</span>
           </span>

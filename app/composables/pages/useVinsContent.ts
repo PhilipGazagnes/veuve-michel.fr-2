@@ -1,4 +1,4 @@
-import type { HeroContent, SeoFields } from '~/content/types'
+import type { HeroContent, MediaTextContent, SeoFields } from '~/content/types'
 
 interface RawPageVins {
   hero_eyebrow: string
@@ -20,6 +20,11 @@ interface RawPageVins {
   order_body: string
   order_cta_label: string
   order_to: string
+  chai_eyebrow: string
+  chai_heading: string
+  chai_body: string
+  chai_image?: { filename: string; alt: string }
+  chai_caption: string
   seo_title: string
   seo_description: string
 }
@@ -59,10 +64,18 @@ export async function useVinsContent() {
     to: raw.value?.order_to ?? '',
   }))
 
+  const chai = computed<MediaTextContent>(() => ({
+    eyebrow: raw.value?.chai_eyebrow ?? '',
+    heading: raw.value?.chai_heading ?? '',
+    body: splitParagraphs(raw.value?.chai_body),
+    image: raw.value?.chai_image?.filename ? raw.value.chai_image : undefined,
+    caption: raw.value?.chai_caption,
+  }))
+
   const seo = computed<SeoFields>(() => ({
     title: raw.value?.seo_title ?? '',
     description: raw.value?.seo_description ?? '',
   }))
 
-  return { hero, video, starCard, gamme, orderBand, seo, ...rest }
+  return { hero, video, starCard, gamme, orderBand, chai, seo, ...rest }
 }
