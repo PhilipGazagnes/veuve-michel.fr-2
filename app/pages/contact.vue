@@ -1,16 +1,27 @@
 <script setup lang="ts">
+import type { IconName } from '~/types/icons'
+
 definePageMeta({ headerVariant: 'solid' })
 
 const {
   titleBand: contactTitleBand,
-  infoRows: contactInfoRows,
+  infoRows: contactOtherInfoRows,
   mapCaption: contactMapCaption,
   activities: contactActivities,
   seo: contactSeo,
 } = await useContactContent()
 const { data: activityCards } = await useActivityCards()
+const { data: globalConfig } = await useGlobalConfig()
 
 useSeoMeta({ title: contactSeo.value.title, description: contactSeo.value.description })
+
+// Phone/email are entered once in the global config, never duplicated on this page's content.
+const contactInfoRows = computed(() => {
+  const rows: { icon: IconName; label: string; value: string }[] = []
+  if (globalConfig.value?.phone) rows.push({ icon: 'phone', label: 'Téléphone', value: globalConfig.value.phone })
+  if (globalConfig.value?.email) rows.push({ icon: 'mail', label: 'Email', value: globalConfig.value.email })
+  return [...rows, ...contactOtherInfoRows.value]
+})
 </script>
 
 <template>

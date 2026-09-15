@@ -24,7 +24,7 @@ useSeoMeta({
       :height="680"
       :height-mobile="490"
       text-align="center"
-      desktop-align="center"
+      desktop-align="bottom"
       mobile-align="bottom"
     />
 

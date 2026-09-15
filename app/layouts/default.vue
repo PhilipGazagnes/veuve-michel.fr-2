@@ -11,6 +11,6 @@ const { data: config } = await useGlobalConfig()
     <main class="flex-1">
       <slot />
     </main>
-    <LayoutAppFooter :show-ornaments="config?.showOrnaments ?? true" :address="config?.addressLine" />
+    <LayoutAppFooter :address="config?.addressLine" />
   </div>
 </template>

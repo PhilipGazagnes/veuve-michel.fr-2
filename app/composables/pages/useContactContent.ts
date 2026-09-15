@@ -22,8 +22,12 @@ export async function useContactContent() {
     heading: raw.value?.title_heading ?? '',
   }))
 
+  // Phone/email are always sourced from the global config (see contact.vue) so they only
+  // ever need to be entered once — any phone/mail row saved on this page's own content is ignored.
   const infoRows = computed(() =>
-    (raw.value?.info_rows ?? []).map((r) => ({ icon: r.icon, label: r.label, value: r.value })),
+    (raw.value?.info_rows ?? [])
+      .filter((r) => r.icon !== 'phone' && r.icon !== 'mail')
+      .map((r) => ({ icon: r.icon, label: r.label, value: r.value })),
   )
 
   const mapCaption = computed(() => raw.value?.map_caption ?? '')

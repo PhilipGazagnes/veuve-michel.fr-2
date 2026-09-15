@@ -37,14 +37,12 @@ export interface GlobalConfig {
   email: string
   addressLine: string
   legalPageLink: string
-  showOrnaments: boolean
 }
 
 export interface Cuvee {
   slug: string
   name: string
   cepages: string
-  millesime: string
   price: number
   description: string
   image?: CmsImage

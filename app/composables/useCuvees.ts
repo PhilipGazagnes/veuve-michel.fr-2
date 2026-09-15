@@ -5,7 +5,6 @@ interface RawSpecItem { label: string; value: string }
 interface RawCuvee {
   name: string
   cepages: string
-  millesime: string
   price: number
   description: string
   image?: { filename: string; alt: string }
@@ -27,7 +26,6 @@ function mapCuvee(raw: RawCuvee, slug: string): Cuvee {
     slug,
     name: raw.name,
     cepages: raw.cepages,
-    millesime: raw.millesime,
     price: raw.price,
     description: raw.description,
     image: raw.image?.filename ? raw.image : undefined,

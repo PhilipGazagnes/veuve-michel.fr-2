@@ -34,8 +34,8 @@ useSchemaOrg(
       :height="400"
       :height-mobile="390"
       text-align="left"
-      desktop-align="center"
-      mobile-align="center"
+      desktop-align="bottom"
+      mobile-align="bottom"
     />
 
     <section class="px-6 pb-6 pt-12 text-center md:px-14 md:pb-4 md:pt-[72px]">

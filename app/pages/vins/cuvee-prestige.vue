@@ -35,7 +35,7 @@ useSchemaOrg([
       <div class="mx-auto flex max-w-content flex-col gap-8 md:flex-row md:items-start md:gap-[52px]">
         <div class="w-full md:sticky md:top-6 md:w-[340px] md:shrink-0">
           <div class="aspect-[3/4] overflow-hidden rounded-card">
-            <UiPlaceholderImage gradient-from="#efe7db" gradient-to="#dccbb8" />
+            <UiPlaceholderImage :image="cuvee.image" sizes="sm:100vw md:340px" />
           </div>
         </div>
 

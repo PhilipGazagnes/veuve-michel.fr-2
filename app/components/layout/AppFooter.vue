@@ -1,11 +1,9 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    showOrnaments?: boolean
     address?: string
   }>(),
   {
-    showOrnaments: true,
     address: 'Veuve Michel — Mas de l\'Église, 34800 Octon, France',
   },
 )
@@ -13,7 +11,7 @@ withDefaults(
 
 <template>
   <footer class="relative overflow-hidden bg-maroon px-6 pb-9 pt-11 md:px-14 md:pb-[76px] md:pt-[76px]">
-    <div v-if="showOrnaments" class="pointer-events-none absolute inset-0 hidden md:block">
+    <div class="pointer-events-none absolute inset-0 hidden md:block">
       <UiOliveBranch :width="230" :height="138" class="absolute -left-16 -top-4 rotate-180 text-white opacity-[0.08]" />
       <UiOliveBranch :width="230" :height="138" class="absolute -bottom-4 -right-16 text-white opacity-[0.08]" />
     </div>

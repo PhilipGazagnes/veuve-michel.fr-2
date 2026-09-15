@@ -5,7 +5,6 @@ interface RawConfig {
   email: string
   address_line: string
   legal_page_link: string
-  show_ornaments: boolean
   activity_cards: { key: string; title: string; text: string; to: string; image?: { filename: string; alt: string } }[]
 }
 
@@ -23,7 +22,6 @@ export async function useGlobalConfig() {
           email: raw.value.email,
           addressLine: raw.value.address_line,
           legalPageLink: raw.value.legal_page_link,
-          showOrnaments: raw.value.show_ornaments,
         }
       : null,
   )

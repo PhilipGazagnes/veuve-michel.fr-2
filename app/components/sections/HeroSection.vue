@@ -24,7 +24,7 @@ withDefaults(
     gradientTo: '#3a2a22',
     height: 440,
     textAlign: 'left',
-    desktopAlign: 'center',
+    desktopAlign: 'bottom',
     mobileAlign: 'bottom',
     headingLevel: 'h1',
   },

@@ -31,7 +31,7 @@ useSchemaOrg([
       :height="420"
       :height-mobile="400"
       text-align="left"
-      desktop-align="center"
+      desktop-align="bottom"
       mobile-align="bottom"
     />
 
