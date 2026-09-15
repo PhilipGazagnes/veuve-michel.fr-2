@@ -37,6 +37,15 @@ export default <Partial<Config>>{
         label: '0.24em',
         wordmark: '0.34em',
       },
+      keyframes: {
+        'ping-slow': {
+          '0%': { transform: 'scale(1)', opacity: '0.75' },
+          '50%, 100%': { transform: 'scale(2)', opacity: '0' },
+        },
+      },
+      animation: {
+        'ping-slow': 'ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
+      },
     },
   },
 }

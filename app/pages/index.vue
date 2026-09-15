@@ -21,6 +21,7 @@ useSeoMeta({
       :image="homeHero.image"
       :cta-primary="homeHero.ctaPrimary"
       :cta-secondary="homeHero.ctaSecondary"
+      location-badge
       :height="680"
       :height-mobile="490"
       text-align="center"

@@ -74,8 +74,7 @@ useSchemaOrg([
     </section>
 
     <SectionsCtaBand :heading="evenementsCta.heading" :note="evenementsCta.note" note-italic>
-      <UiButtonCta href="tel:+330000000" label="04 •• •• •• ••" variant="solid" />
-      <UiButtonCta to="/contact" label="Envoyer un email" variant="outline" />
+      <UiButtonCta to="/contact" label="Nous contacter" variant="solid" />
     </SectionsCtaBand>
   </div>
 </template>

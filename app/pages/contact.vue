@@ -35,12 +35,22 @@ const contactInfoRows = computed(() => {
             <UiIconBadge :icon="row.icon" :size="44" />
             <div>
               <p class="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">{{ row.label }}</p>
-              <p class="whitespace-pre-line font-serif text-lg text-ink">{{ row.value }}</p>
+              <a
+                v-if="row.icon === 'phone'"
+                :href="`tel:${row.value.replace(/\s/g, '')}`"
+                class="whitespace-pre-line font-serif text-lg text-ink hover:text-maroon"
+              >{{ row.value }}</a>
+              <a
+                v-else-if="row.icon === 'mail'"
+                :href="`mailto:${row.value}`"
+                class="whitespace-pre-line font-serif text-lg text-ink hover:text-maroon"
+              >{{ row.value }}</a>
+              <p v-else class="whitespace-pre-line font-serif text-lg text-ink">{{ row.value }}</p>
             </div>
           </div>
         </div>
         <div class="min-h-[220px] flex-[1.2] md:min-h-[380px]">
-          <UiMapPlaceholder :caption="contactMapCaption" />
+          <UiMapPlaceholder :caption="contactMapCaption" :address="globalConfig?.addressLine" :zoom="10" />
         </div>
       </div>
     </section>

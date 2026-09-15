@@ -49,7 +49,7 @@ watch(
           v-for="item in NAV_ITEMS"
           :key="item.to"
           :to="item.to"
-          class="border-b border-white/[0.16] py-5 font-serif text-3xl text-cream"
+          class="border-b border-white/[0.16] py-5 font-serif text-2xl text-cream"
           @click="emit('close')"
         >
           {{ item.label }}

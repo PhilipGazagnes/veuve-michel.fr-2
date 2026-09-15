@@ -28,7 +28,7 @@ const isTransparent = computed(() => props.variant === 'transparent')
     <div class="flex w-full px-6 py-5 md:px-14 md:py-6">
       <div class="mx-auto flex w-full max-w-content items-center justify-between">
         <NuxtLink to="/" class="relative -left-5 flex items-center" :class="isTransparent ? 'text-white' : 'text-maroon'">
-          <UiLogoMark :size="100" />
+          <UiLogoMark :size="100" class="h-20 w-20 md:h-[100px] md:w-[100px]" />
           <span class="flex flex-col leading-none">
             <span
               class="font-sans text-[11px] font-semibold uppercase tracking-[0.5em]"

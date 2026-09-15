@@ -1,11 +1,27 @@
 <script setup lang="ts">
-withDefaults(defineProps<{ caption?: string }>(), {
+const props = withDefaults(defineProps<{ caption?: string; address?: string; zoom?: number }>(), {
   caption: 'Google Maps — localisation du domaine',
+  zoom: 14,
 })
+
+// No Google Maps API key needed for this query-based embed — it just geocodes the address.
+const embedSrc = computed(() =>
+  props.address ? `https://www.google.com/maps?q=${encodeURIComponent(props.address)}&z=${props.zoom}&output=embed` : undefined,
+)
 </script>
 
 <template>
+  <iframe
+    v-if="embedSrc"
+    :src="embedSrc"
+    :title="caption"
+    class="h-full min-h-[220px] w-full rounded-card md:min-h-[380px]"
+    style="border: 0"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  />
   <div
+    v-else
     class="relative flex h-full min-h-[220px] items-center justify-center overflow-hidden rounded-card md:min-h-[380px]"
     style="background: linear-gradient(135deg, #dfe6df, #c3d0c2)"
   >

@@ -66,14 +66,14 @@ function openDiaporama(index: number) {
         </span>
       </div>
 
-      <details class="group/details">
-        <summary class="cursor-pointer font-sans text-xs font-semibold uppercase tracking-[0.1em] text-maroon">
+      <div>
+        <p class="font-sans text-xs font-semibold uppercase tracking-[0.1em] text-maroon">
           Inventaire &amp; équipements
-        </summary>
+        </p>
         <ul class="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 font-sans text-sm text-body">
           <li v-for="entry in gite.inventory" :key="entry">{{ entry }}</li>
         </ul>
-      </details>
+      </div>
     </div>
 
     <UiPhotoDiaporama

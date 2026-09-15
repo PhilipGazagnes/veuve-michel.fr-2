@@ -51,6 +51,17 @@ l'une d'elles ne se génère pas, pour éviter de livrer un site avec une page m
 5. Coller cette URL dans Storyblok (Settings → Webhooks → "Story published / unpublished")
    — chaque publication de contenu redéclenchera alors un build statique à jour.
 
+## Guide interne (`/aide`)
+
+Un aide-mémoire à destination du propriétaire du site (`app/pages/aide.vue`) explique comment
+gérer le contenu depuis Storyblok sans intervention d'un développeur. Cette page est protégée
+par une authentification HTTP Basique appliquée uniquement sur `/aide` via une Netlify Edge
+Function (`netlify/edge-functions/aide-auth.ts`) — le site n'étant pas hébergé sur Apache,
+`.htaccess` n'a aucun effet sur Netlify. Renseigner les identifiants `AIDE_USER` / `AIDE_PASSWORD`
+dans les variables d'environnement du site Netlify (Site settings → Environment variables) ;
+sans elles, `/aide` répond une erreur 500 plutôt que de rester ouverte. Elle est par ailleurs
+exclue du sitemap et de l'indexation (`routeRules` dans `nuxt.config.ts`).
+
 ## Contenu (Storyblok)
 
 Le modèle de contenu vit dans l'espace Storyblok (config globale + 6 "page stories" +

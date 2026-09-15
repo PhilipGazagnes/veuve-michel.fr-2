@@ -12,6 +12,7 @@ withDefaults(
     gradientTo?: string
     ctaPrimary?: Cta
     ctaSecondary?: Cta
+    locationBadge?: boolean
     height?: number
     heightMobile?: number
     textAlign?: 'left' | 'center'
@@ -66,6 +67,7 @@ withDefaults(
         ]"
       >
         <div class="flex flex-col gap-4" :class="textAlign === 'center' ? 'max-w-2xl items-center' : 'max-w-2xl items-start'">
+          <UiLocationBadge v-if="locationBadge" :size="64" />
           <UiBadgePill v-if="badge" :label="badge" tone="outline-light" />
           <p
             v-if="eyebrow"
@@ -79,7 +81,7 @@ withDefaults(
           >
             {{ heading }}
           </component>
-          <p v-if="subheading" class="max-w-xl font-sans text-[15px] leading-relaxed text-white sm:text-lg">
+          <p v-if="subheading" class="hidden md:block max-w-xl font-sans text-[15px] leading-relaxed text-white sm:text-lg">
             {{ subheading }}
           </p>
           <div v-if="ctaPrimary || ctaSecondary" class="mt-2 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
