@@ -1,4 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+// Coupe-circuit SEO global : quand DISCOURAGE_SEO=true, le site entier passe
+// en noindex/nofollow, le sitemap est désactivé et robots.txt bloque tous les
+// robots (y compris les bots IA). Utile pour les environnements de
+// preview/staging qu'on ne veut jamais voir indexés.
+const discourageSeo = process.env.DISCOURAGE_SEO === 'true'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -28,6 +35,19 @@ export default defineNuxtConfig({
   site: {
     url: 'https://domaine-veuve-michel.fr',
     name: 'Domaine Veuve Michel',
+    // Propagé à @nuxtjs/robots (meta tag + header) et @nuxtjs/sitemap
+    // (exclusion des routes) par nuxt-site-config.
+    indexable: !discourageSeo,
+  },
+
+  robots: {
+    disallow: discourageSeo ? ['/'] : [],
+    blockAiBots: discourageSeo,
+    blockNonSeoBots: discourageSeo,
+  },
+
+  sitemap: {
+    enabled: !discourageSeo,
   },
 
   googleFonts: {
