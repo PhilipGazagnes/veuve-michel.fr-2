@@ -350,7 +350,6 @@ const rootComponents = [
       histoire_heading: { type: 'text', display_name: 'Histoire — titre' },
       histoire_body: { type: 'textarea', display_name: 'Histoire — texte' },
       histoire_caption: { type: 'text', display_name: 'Histoire — légende photo' },
-      video_url: { type: 'text', display_name: 'Vidéo — URL YouTube' },
     },
   },
   {
@@ -678,7 +677,6 @@ async function seedContent() {
       histoire_heading: 'Née d\'une parcelle, portée par une transmission',
       histoire_body: 'Cette cuvée naît des vieilles vignes d\'une parcelle unique, travaillée à la main. Elle porte le fil rouge du domaine : le père qui transmet, le fils qui poursuit, fidèles à l\'esprit des lieux.',
       histoire_caption: 'Photo — la parcelle',
-      video_url: 'https://www.youtube.com/watch?v=-UTU2k5hhWA&t=11s',
     },
   })
 

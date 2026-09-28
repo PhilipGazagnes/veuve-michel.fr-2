@@ -18,7 +18,6 @@ interface RawCuvee {
   histoire_heading?: string
   histoire_body?: string
   histoire_caption?: string
-  video_url?: string
 }
 
 function mapCuvee(raw: RawCuvee, slug: string): Cuvee {
@@ -47,7 +46,6 @@ function mapCuvee(raw: RawCuvee, slug: string): Cuvee {
           caption: raw.histoire_caption,
         }
       : undefined,
-    videoUrl: raw.video_url,
   }
 }
 

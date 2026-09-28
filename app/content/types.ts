@@ -50,7 +50,6 @@ export interface Cuvee {
   specGrid?: { label: string; value: string }[]
   degustation?: MediaTextContent
   histoire?: MediaTextContent
-  videoUrl?: string
 }
 
 export interface GiteInventoryItem {
