@@ -62,6 +62,13 @@ dans les variables d'environnement du site Netlify (Site settings → Environmen
 sans elles, `/help` répond une erreur 500 plutôt que de rester ouverte. Elle est par ailleurs
 exclue du sitemap et de l'indexation (`routeRules` dans `nuxt.config.ts`).
 
+## Protection globale (optionnelle)
+
+Tout le site peut être protégé par une authentification HTTP Basique via
+`netlify/edge-functions/global-auth.ts`. Elle ne s'active que si `GLOBAL_USER` et
+`GLOBAL_PASSWORD` sont renseignées dans les variables d'environnement Netlify ; sinon le site
+reste public. `/help` en est exclu puisqu'il a déjà sa propre protection.
+
 ## Contenu (Storyblok)
 
 Le modèle de contenu vit dans l'espace Storyblok (config globale + 6 "page stories" +
