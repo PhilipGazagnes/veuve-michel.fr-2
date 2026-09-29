@@ -7,6 +7,11 @@ withDefaults(
     address: 'Veuve Michel — Mas de l\'Église, 34800 Octon, France',
   },
 )
+
+// Zone cachée sans href : invisible pour les crawlers
+function goToHelp() {
+  navigateTo('/help')
+}
 </script>
 
 <template>
@@ -42,5 +47,11 @@ withDefaults(
         {{ address }}
       </p>
     </div>
+
+    <div
+      aria-hidden="true"
+      class="absolute bottom-0 right-0 z-10 h-40 w-40"
+      @click="goToHelp"
+    />
   </footer>
 </template>

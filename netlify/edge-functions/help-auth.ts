@@ -1,4 +1,4 @@
-// Protège /aide par authentification HTTP Basique (équivalent .htaccess pour Netlify).
+// Protège /help par authentification HTTP Basique (équivalent .htaccess pour Netlify).
 // Identifiants à définir dans Site settings → Environment variables : AIDE_USER, AIDE_PASSWORD.
 export default async (request: Request, context: { next: () => Promise<Response> }) => {
   const user = Netlify.env.get('AIDE_USER')
@@ -24,4 +24,4 @@ export default async (request: Request, context: { next: () => Promise<Response>
   return context.next()
 }
 
-export const config = { path: ['/aide', '/aide/*'] }
+export const config = { path: ['/help', '/help/*'] }

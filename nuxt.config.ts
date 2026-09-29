@@ -76,14 +76,14 @@ export default defineNuxtConfig({
         '/evenements',
         '/arboriculture',
         '/mentions-legales',
-        '/aide',
+        '/help',
       ],
     },
   },
 
   routeRules: {
-    // Guide interne protégé (voir netlify/edge-functions/aide-auth.ts) : exclu de
+    // Guide interne protégé (voir netlify/edge-functions/help-auth.ts) : exclu de
     // l'indexation et du sitemap public.
-    '/aide': { robots: false },
+    '/help': { robots: false },
   },
 })

@@ -15,10 +15,8 @@ const sommaire = [
   { id: 'gites', label: '6. Ajouter / retirer un gîte' },
   { id: 'photos', label: '7. Changer une photo' },
   { id: 'coordonnees', label: '8. Coordonnées, horaires, tarifs' },
-  { id: 'placeholders', label: '9. Les « •• » à compléter' },
-  { id: 'annuler', label: '10. Annuler une erreur' },
-  { id: 'probleme', label: '11. Si ça bloque' },
-  { id: 'glossaire', label: '12. Glossaire éclair' },
+  { id: 'annuler', label: '9. Annuler une erreur' },
+  { id: 'glossaire', label: '10. Glossaire éclair' },
 ]
 </script>
 
@@ -49,7 +47,7 @@ const sommaire = [
           <ul class="mt-2 list-disc space-y-1 pl-5">
             <li>URL : <a href="https://app.storyblok.com" class="text-maroon underline underline-offset-2">app.storyblok.com</a></li>
             <li>Identifiant : à compléter (email transmis à la mise en service).</li>
-            <li>Espace : « Domaine Veuve Michel », visible en haut à gauche une fois connecté.</li>
+            <li>Espace : « Website ».</li>
           </ul>
         </div>
 
@@ -116,35 +114,16 @@ const sommaire = [
           </p>
         </div>
 
-        <div id="placeholders" class="scroll-mt-6">
-          <h2 class="font-serif text-lg text-ink">9. Les « •• » à compléter</h2>
-          <p class="mt-2">
-            Certains champs affichent volontairement <code class="rounded bg-hairline-strong px-1.5 py-0.5 text-[13px]">••</code>
-            : ce sont des informations pas encore fournies (tarifs, téléphone, noms de gîtes...).
-            À remplacer au fur et à mesure, sans attendre une refonte. Idem pour la page
-            <NuxtLink to="/mentions-legales" class="text-maroon underline underline-offset-2">Mentions légales</NuxtLink>
-            (SIRET, hébergeur, directeur de publication).
-          </p>
-        </div>
-
         <div id="annuler" class="scroll-mt-6">
-          <h2 class="font-serif text-lg text-ink">10. Annuler une erreur</h2>
+          <h2 class="font-serif text-lg text-ink">9. Annuler une erreur</h2>
           <p class="mt-2">
             Dans une story, onglet <em>History</em> (icône horloge, en haut à droite) → liste des
             versions précédentes → <em>Restore</em>. Fonctionne même après publication.
           </p>
         </div>
 
-        <div id="probleme" class="scroll-mt-6">
-          <h2 class="font-serif text-lg text-ink">11. Si ça bloque</h2>
-          <p class="mt-2">
-            Contacter le développeur, en précisant : la page concernée, une capture d'écran, et
-            l'heure approximative (ex. « j'ai changé la photo de la page Gîtes vers 14h »).
-          </p>
-        </div>
-
         <div id="glossaire" class="scroll-mt-6">
-          <h2 class="font-serif text-lg text-ink">12. Glossaire éclair</h2>
+          <h2 class="font-serif text-lg text-ink">10. Glossaire éclair</h2>
           <ul class="mt-2 list-disc space-y-1 pl-5">
             <li><strong class="text-ink">Story</strong> — une page ou une fiche de contenu.</li>
             <li><strong class="text-ink">Composant</strong> — un bloc de champs réutilisable (ex. « texte + image »).</li>
